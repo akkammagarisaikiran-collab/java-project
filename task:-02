@@ -1,0 +1,43 @@
+import java.util.*;
+
+class Student {
+    String name;
+    int roll;
+    String dept;
+
+    void display() {
+        System.out.println(name + " " + roll + " " + dept);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student st1 = new Student();
+        st1.name = "Madhu";
+        st1.roll = 192312261;
+        st1.dept = "ECE";
+
+        Student st2 = new Student();
+        st2.name = "sai kiran";
+        st2.roll = 1923122611;
+        st2.dept = "ECE";
+
+        Student st3 = new Student();
+        st3.name = "ahid basha";
+        st3.roll = 192312257;
+        st3.dept = "ECE";
+
+        System.out.println(st1.name + " " + st1.roll + " " + st1.dept);
+        System.out.println(st2.name + " " + st2.roll + " " + st2.dept);
+        System.out.println(st3.name + " " + st3.roll + " " + st3.dept);
+
+        ArrayList<Student> list = new ArrayList<>();
+        list.add(st1);
+        list.add(st2);
+        list.add(st3);
+
+        for(Student s : list)
+            s.display();
+    }
+}
